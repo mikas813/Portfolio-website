@@ -1,0 +1,1 @@
+export const Content = (props) => <main>{props.children}</main>;

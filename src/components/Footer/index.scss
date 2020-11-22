@@ -1,0 +1,11 @@
+footer {
+  font-size: 1.6rem;
+  color: white;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}

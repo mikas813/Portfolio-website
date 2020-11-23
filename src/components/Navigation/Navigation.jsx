@@ -8,12 +8,14 @@ export const Navigation = () => {
         const box = document.querySelector('#box');
         box.classList.value = '';
 
-        const contMsg = document.querySelector('#messageWrapper');
-        contMsg.innerHTML = '';
+        const messageWrapper = document.querySelector('#message-side');
+        messageWrapper.innerHTML = '';
 
         box.classList.add(e.target.dataset.side);
-        if (e.target.dataset.side === 'show-front') {
+
+        if (e.target.dataset.side === 'show-front' && document.querySelector('.about-side').classList.contains('empty')) {
             type(content.aboutText, 'about-side');
+            document.querySelector('.about-side').classList.remove('empty')
         }
     };
     return (

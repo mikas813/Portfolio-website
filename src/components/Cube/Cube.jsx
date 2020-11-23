@@ -15,7 +15,7 @@ export const Cube = () => {
         <div className="scene">
             <div id="box" className="show-top">
                 <div className="box__face box__face--front">
-                    <div className='about-side'>
+                    <div className='about-side empty'>
                         <h2>About me</h2>
                         <p id='about-side'>
                         </p>
@@ -31,7 +31,7 @@ export const Cube = () => {
                     <ContactSide/>
                 </div>
                 <div className="box__face box__face--back">
-                    <div id="messageWrapper"></div>
+                    <div id="message-side"></div>
                 </div>
             </div>
         </div>

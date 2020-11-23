@@ -4,5 +4,6 @@ export let content = {
     'proficient in HTML, CSS, JavaScript, React.\n' +
     'Tech Degree in Front End Development graduated\n' +
     'from EDIT. - Disruptive Digital Education.',
-    message: 'Message sent. Thanks.'
+    message: 'Message sent. Thanks.',
+    error: 'Something went wrong!'
 }

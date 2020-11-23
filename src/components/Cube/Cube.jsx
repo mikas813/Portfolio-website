@@ -23,8 +23,8 @@ export const Cube = () => {
                 </div>
                 <div className="box__face box__face--top">
                     <div className='home-side'>
-                        <p id='home-side'>
-                        </p>
+                        <h1 id='home-side'>
+                        </h1>
                     </div>
                 </div>
                 <div className="box__face box__face--bottom">

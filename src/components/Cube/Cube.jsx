@@ -1,20 +1,15 @@
 import './index.scss'
 import {content} from '../../data';
 import {ContactSide} from './ContactSide/Contacts';
+import {type} from '../../utils'
 
 
 export const Cube = () => {
 
-    const type = () => {
-        const arr = content.mainText.split('');
-        for (let i = 0; i < arr.length; i++) {
-            (() => { setTimeout(() => {
-                document.getElementById('home-side').innerHTML += arr[i]
-            }, i * 50)
-            })()
-        }
-    };
-    window.addEventListener('DOMContentLoaded', type());
+    window.addEventListener(
+        'DOMContentLoaded',
+        type(content.mainText, 'home-side')
+    );
 
     return (
         <div className="scene">
@@ -36,6 +31,7 @@ export const Cube = () => {
                     <ContactSide/>
                 </div>
                 <div className="box__face box__face--back">
+                    <div id="messageWrapper"></div>
                 </div>
             </div>
         </div>

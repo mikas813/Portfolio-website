@@ -1,14 +1,23 @@
 import './index.scss'
+import {type} from '../../../utils';
+import {content} from '../../../data';
 import emailjs from 'emailjs-com';
 
 export const ContactSide = () => {
+
     const sendEmail = (e) => {
         e.preventDefault();
         document.getElementById('box').classList.value = '';
         document.getElementById('box').classList.add('rotate');
-        // emailjs.sendForm('service_yx4jqaf', 'template_1u82alm', e.target, 'user_3hIFmLZWQw8fFEPF6xpY0')
-        //     .then((response) => {
-        //         console.log('SUCCESS!', response.status, response.text, e.target);
+        // emailjs.sendForm(
+        // 'service_yx4jqaf',
+        // 'template_1u82alm',
+        // e.target,
+        // 'user_3hIFmLZWQw8fFEPF6xpY0').then((response) => {
+        setTimeout(() => {
+            type(content.message, 'messageWrapper')
+        }, 5000)
+
         //     }, (error) => {
         //         console.log('FAILED...', error);
         //     });

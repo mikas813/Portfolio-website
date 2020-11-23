@@ -1,29 +1,19 @@
 import './index.scss';
 import {content} from '../../data';
+import {type} from '../../utils';
 
 export const Navigation = () => {
-
-    const type = () => {
-        const textWrapper = document.getElementById('about-side');
-        const arr = content.aboutText.split('');
-        if (textWrapper.classList.value !== 'not-empty') {
-            for (let i = 0; i < arr.length; i++) {
-                (() => {
-                    setTimeout(() => {
-                        textWrapper.innerHTML += arr[i];
-                    }, i * 50);
-                })();
-            }
-        }
-        textWrapper.classList.add('not-empty');
-    };
 
     const rotateBox = (e) => {
         const box = document.querySelector('#box');
         box.classList.value = '';
+
+        const contMsg = document.querySelector('#messageWrapper');
+        contMsg.innerHTML = '';
+
         box.classList.add(e.target.dataset.side);
         if (e.target.dataset.side === 'show-front') {
-            type();
+            type(content.aboutText, 'about-side');
         }
     };
     return (

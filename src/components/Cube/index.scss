@@ -58,7 +58,9 @@
   left: 22%;
 }
 
-
+#messageWrapper {
+  transform: rotate(180deg);
+}
 #box.rotate {
   transition: transform 5s;
   transform: translateZ(-100px) rotateX(1260deg);

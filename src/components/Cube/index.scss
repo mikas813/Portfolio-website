@@ -31,11 +31,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  h1 {
+    font-size: 2.6rem;
+  }
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
   @media (max-width: 512px) {
     font-size: 1.4rem;
+    h1 {
+      font-size: 2rem;
+    }
     h2 {
       font-size: 1.8rem;
     }
@@ -62,8 +68,12 @@
   transform: rotate(180deg);
 }
 #box.rotate {
-  transition: transform 5s;
-  transform: translateZ(-100px) rotateX(1260deg);
+  transition: transform 1s;
+  transform: translateZ(-100px) rotateX(180deg);
+}
+
+@keyframes rotate{
+  to{ transform: rotateX(360deg);}
 }
 
 #box.show-front {

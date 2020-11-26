@@ -31,21 +31,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  h1 {
-    font-size: 2.6rem;
-  }
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
   @media (max-width: 512px) {
     font-size: 1.4rem;
-    h1 {
+    h1, h2 {
       font-size: 2rem;
     }
-    h2 {
-      font-size: 1.8rem;
-    }
   }
+}
+
+
+.shake {
+  animation: shake .7s;
+}
+
+@keyframes shake {
+  0% { transform: translate(0) rotateY(0deg); }
+  10% { transform: translate(0) rotateY(4deg); }
+  20% { transform: translate(0) rotateY(0deg); }
+  30% { transform: translate(0) rotateY(-4deg); }
+  40% { transform: translate(0) rotateY(0deg); }
+  50% { transform: translate(0) rotateY(4deg); }
+  60% { transform: translate(0) rotateY(0deg); }
+  70% { transform: translate(0) rotateY(-4deg); }
+  80% { transform: translate(0) rotateY(0deg); }
+  90% { transform: translate(0) rotateY(4deg); }
+  100% { transform: translate(0) rotateY(0deg); }
+}
+
+#message-side {
+  transform: rotate(180deg);
+}
+#box.rotate {
+  transition: transform 1s;
+  transform: translateZ(-100px) rotateX(180deg);
+}
+
+@keyframes rotate{
+  to{ transform: rotateX(360deg);}
 }
 
 .box__face--front,
@@ -62,18 +87,6 @@
   height: 100%;
   top: 0;
   left: 22%;
-}
-
-#message-side {
-  transform: rotate(180deg);
-}
-#box.rotate {
-  transition: transform 1s;
-  transform: translateZ(-100px) rotateX(180deg);
-}
-
-@keyframes rotate{
-  to{ transform: rotateX(360deg);}
 }
 
 #box.show-front {

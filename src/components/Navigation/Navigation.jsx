@@ -5,6 +5,7 @@ import {type} from '../../utils';
 export const Navigation = () => {
 
     const rotateBox = (e) => {
+        const aboutSide = document.querySelector('.about-side');
         const box = document.querySelector('#box');
         box.classList.value = '';
 
@@ -12,10 +13,11 @@ export const Navigation = () => {
         messageWrapper.innerHTML = '';
 
         box.classList.add(e.target.dataset.side);
-
-        if (e.target.dataset.side === 'show-front' && document.querySelector('.about-side').classList.contains('empty')) {
+        //Call once this func if avout page hasn't content
+        if (e.target.dataset.side === 'show-front' &&
+            aboutSide.classList.contains('empty')) {
             type(content.aboutText, 'about-side');
-            document.querySelector('.about-side').classList.remove('empty')
+            aboutSide.classList.remove('empty');
         }
     };
     return (
@@ -23,22 +25,22 @@ export const Navigation = () => {
             <ul>
                 <li>
                     <a
-                       data-side='show-top'
-                       onClick={(e) => rotateBox(e)}
+                        data-side='show-top'
+                        onClick={(e) => rotateBox(e)}
                     >home
                     </a>
                 </li>
                 <li>
                     <a
-                       data-side='show-front'
-                       onClick={(e) => rotateBox(e)}
+                        data-side='show-front'
+                        onClick={(e) => rotateBox(e)}
                     >about
                     </a>
                 </li>
                 <li>
                     <a
-                       data-side='show-bottom'
-                       onClick={(e) => rotateBox(e)}
+                        data-side='show-bottom'
+                        onClick={(e) => rotateBox(e)}
                     >contacts
                     </a>
                 </li>

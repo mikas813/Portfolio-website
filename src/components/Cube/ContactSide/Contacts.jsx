@@ -6,26 +6,24 @@ import emailjs from 'emailjs-com';
 export const ContactSide = () => {
 
     const sendEmail = (e) => {
-
         e.preventDefault();
+
         const box = document.getElementById('box');
+        const form = document.querySelector('form');
 
         box.classList.value = '';
         box.classList.add('rotate');
-        //Send email func
+
         emailjs.sendForm(
             'service_yx4jqaf',
             'template_1u82alm',
             e.target,
-            'user_3hIFmLZWQw8fFEPF6xpY0').then(() => {
-                //If success rotate and add success message
-                type(content.message, 'message-side');
-        }, () => {
-                //If error rotate and add error message
-                type(content.error, 'message-side');
-        });
-
-        document.querySelector('form').reset();
+            'user_3hIFmLZWQw8fFEPF6xpY0')
+            .then(
+                () => type(content.message, 'message-side'),
+                () => type(content.error, 'message-side'),
+            );
+        form.reset();
     };
 
     return (

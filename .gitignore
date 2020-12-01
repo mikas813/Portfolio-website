@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-.idea
-.env
+.idea-old/
+.env-old
 
 # testing
 /coverage

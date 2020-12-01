@@ -5,16 +5,13 @@ import {SocLinks} from './components/SocLinks/SocLinks';
 import {Border} from './components/Border/Border';
 import {Content} from './components/Content';
 import {Cube} from './components/Cube/Cube';
-import ReactGA from 'react-ga';
 import React, {useEffect} from 'react';
+import ReactGA from 'react-ga';
 
 export const App = () => {
-
     useEffect(() => {
-        ReactGA.initialize('G-03EE6RX9B4');
-        ReactGA.pageview('/')
-        }, []);
-
+        ReactGA.initialize(process.env.REACT_APP_GA_TRAKING);
+    }, []);
     return (
         <div className="App">
             <Border>

@@ -13,7 +13,6 @@ export const Navigation = () => {
         messageWrapper.innerHTML = '';
 
         box.classList.add(e.target.dataset.side);
-        //Call once this func if avout page hasn't content
         if (e.target.dataset.side === 'show-front' &&
             aboutSide.classList.contains('empty')) {
             type(content.aboutText, 'about-side');

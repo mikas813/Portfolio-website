@@ -15,15 +15,17 @@ export const ContactSide = () => {
         box.classList.add('rotate');
 
         emailjs.sendForm(
-            'service_yx4jqaf',
+            'service_yx4jqa',
             'template_1u82alm',
             e.target,
             'user_3hIFmLZWQw8fFEPF6xpY0')
             .then(
-                () => type(content.message, 'message-side'),
-                () => type(content.error, 'message-side'),
+                () => {
+                    type(content.message, 'message-side');
+                    form.reset()
+                },
+                () => type(content.error, 'message-side')
             );
-        form.reset();
     };
 
     return (
@@ -41,8 +43,8 @@ export const ContactSide = () => {
                 <label htmlFor="">Enter your message</label>
                 <textarea
                     required
+                    minLength="10"
                     name="message"
-                    minLength='10'
                     cols="30"
                     rows="10">
                 </textarea>

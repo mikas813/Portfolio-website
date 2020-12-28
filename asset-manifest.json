@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/www.mikas.site/static/css/main.2367b9bf.chunk.css",
-    "main.js": "/www.mikas.site/static/js/main.043adedc.chunk.js",
-    "main.js.map": "/www.mikas.site/static/js/main.043adedc.chunk.js.map",
-    "runtime-main.js": "/www.mikas.site/static/js/runtime-main.e9fe823b.js",
-    "runtime-main.js.map": "/www.mikas.site/static/js/runtime-main.e9fe823b.js.map",
-    "static/js/2.2173d30d.chunk.js": "/www.mikas.site/static/js/2.2173d30d.chunk.js",
-    "static/js/2.2173d30d.chunk.js.map": "/www.mikas.site/static/js/2.2173d30d.chunk.js.map",
-    "index.html": "/www.mikas.site/index.html",
-    "static/css/main.2367b9bf.chunk.css.map": "/www.mikas.site/static/css/main.2367b9bf.chunk.css.map",
-    "static/js/2.2173d30d.chunk.js.LICENSE.txt": "/www.mikas.site/static/js/2.2173d30d.chunk.js.LICENSE.txt"
+    "main.css": "/port/static/css/main.2367b9bf.chunk.css",
+    "main.js": "/port/static/js/main.043adedc.chunk.js",
+    "main.js.map": "/port/static/js/main.043adedc.chunk.js.map",
+    "runtime-main.js": "/port/static/js/runtime-main.17d7cf57.js",
+    "runtime-main.js.map": "/port/static/js/runtime-main.17d7cf57.js.map",
+    "static/js/2.2173d30d.chunk.js": "/port/static/js/2.2173d30d.chunk.js",
+    "static/js/2.2173d30d.chunk.js.map": "/port/static/js/2.2173d30d.chunk.js.map",
+    "index.html": "/port/index.html",
+    "static/css/main.2367b9bf.chunk.css.map": "/port/static/css/main.2367b9bf.chunk.css.map",
+    "static/js/2.2173d30d.chunk.js.LICENSE.txt": "/port/static/js/2.2173d30d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9fe823b.js",
+    "static/js/runtime-main.17d7cf57.js",
     "static/js/2.2173d30d.chunk.js",
     "static/css/main.2367b9bf.chunk.css",
     "static/js/main.043adedc.chunk.js"

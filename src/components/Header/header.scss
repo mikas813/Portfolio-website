@@ -1,0 +1,11 @@
+header {
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  img {
+    max-width: 12rem;
+    height: auto;
+  }
+}

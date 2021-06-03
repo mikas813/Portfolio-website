@@ -1,0 +1,34 @@
+.contact-side {
+  padding: 2rem;
+
+  input, label, textarea {
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  input {
+    margin-bottom: 1rem;
+    padding: .5rem 0;
+  }
+
+  textarea {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 1.4rem;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  button {
+    padding: .5rem 0;
+    width: 100%;
+    background: white;
+    color: black;
+  }
+}

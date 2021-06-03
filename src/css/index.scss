@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+html, body, #root, #root>div {
+    height: 100%
+}
+body {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+    }
+}
+#root {
+    background: white;
+}
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+    background: transparent;
+}
+/*Reset CSS*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+

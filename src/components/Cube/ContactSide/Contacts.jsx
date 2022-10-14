@@ -1,26 +1,20 @@
 import {type} from '../../../utils';
-import {content} from '../../../data';
-import emailjs from 'emailjs-com';
-import './contacts.scss'
-import config from '../../../config';
-import{ init } from 'emailjs-com';
+import {content} from '../../../data'; 
+import './contacts.scss' 
 const { validate } = require('email-validator');
-
+const emailHost = 'https://mikas.dev/prj/send/send.php';
+const to = 'mishalas@icloud.com'
 export const ContactSide = () => {
   
-  
     const sendEmail = async (e) => {
-        e.preventDefault();
-        init("user_3hIFmLZWQw8fFEPF6xpY0");
-
+        e.preventDefault(); 
         const box = document.getElementById('box');
         const form = document.querySelector('form');
-        
         const email = e.target.email.value;
+        const message = e.target.message.value;
         const emailValid = validate(email);
         box.classList.value = '';
-        box.classList.add('rotate');
-        let canRotate = false;
+        box.classList.add('rotate'); 
         try {
             if (email === '') {
                 type(content.noEmail, 'message-side');
@@ -29,28 +23,26 @@ export const ContactSide = () => {
                 type(content.wrongEmail, 'message-side');
             }
             else {
-                await emailjs.sendForm(
-                    'service_yx4jqaf',
-                    'template_1u82alm',
-                    e.target,
-                    config.emailJsApiKey);
-                type(content.message, 'message-side');
+                const res = await fetch(
+                    `${emailHost}?email=${to}&subject=Message%20from%20your%20site&message=${message}.Submiter%20email:%20${email}`
+                );
+                if(res.status === 200) {
+                    setTimeout(() => {
+                        box.classList.value = '';
+                        box.classList.add('show-bottom');
+                        document.querySelector('#message-side').innerHTML = 'Message sent!';
+                        form.reset()
+                    }, 2500)
+                }
             }
-            canRotate = true;
         } catch (e) {
-          type(content.error, 'message-side');
-          canRotate = true;
-          console.warn(e.message)
-        }
-
-        if (canRotate) {
+            type(content.error, 'message-side');
             setTimeout(() => {
-              box.classList.value = '';
-              box.classList.add('show-bottom');
-              document.querySelector('#message-side').innerHTML = '';
-              form.reset()
+                box.classList.value = '';
+                box.classList.add('show-bottom');
+                form.reset()
             }, 2500)
-        }
+        } 
     };
 
     return (

@@ -23,26 +23,26 @@ export const Navigation = () => {
         <nav>
             <ul>
                 <li>
-                    <a
+                    <a  
                         data-side='show-top'
                         onClick={(e) => rotateBox(e)}
                     >home
                     </a>
                 </li>
                 <li>
-                    <a
+                    <a 
                         data-side='show-front'
                         onClick={(e) => rotateBox(e)}
                     >about
                     </a>
                 </li>
                 <li>
-                    <a
+                    <a  
                         data-side='show-bottom'
                         onClick={(e) => rotateBox(e)}
                     >contacts
                     </a>
-                </li>
+                </li> 
             </ul>
         </nav>
     );

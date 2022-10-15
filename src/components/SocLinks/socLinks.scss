@@ -4,7 +4,9 @@
   top: 50%;
   transform: translate(50%, -50%);
   transition: 1s;
-
+  .certificate{
+    background-color: black;
+  }
   li {
     width: 32px;
     height: 32px;

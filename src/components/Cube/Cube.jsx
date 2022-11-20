@@ -1,30 +1,22 @@
-import {content} from '../../data';
 import {ContactSide} from './ContactSide/Contacts';
-import {type} from '../../utils'
 import './cube.scss'
-
-
+import { TextWrapper } from '../TextWrapper'
+import useContent from '../../hooks/useContent'
 
 export const Cube = () => {
-
-    window.addEventListener(
-        'DOMContentLoaded',
-        type(content.mainText, 'home-side')
-    );
-
+    const [content, isLoading] = useContent();
     return (
         <div className="scene">
             <div id="box" className="show-top">
                 <div className="box__face box__face--front">
-                    <div className='about-side empty'>
-                        <h2>About me</h2>
-                        <p id='about-side'/>
+                    <div className='about-side empty'> 
+                        <TextWrapper props={{ content, isLoading, type: 2 }} />
                     </div>
                 </div>
                 <div className="box__face box__face--top">
                     <div className='home-side'>
-                        <h1>Hello!</h1>
-                        <p id='home-side'/>
+                        <h1 id='home-side_title'>Hello!</h1>
+                        <TextWrapper props={{content, isLoading, type: 1}}/>
                     </div>
                 </div>
                 <div className="box__face box__face--bottom">

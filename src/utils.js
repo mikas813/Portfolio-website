@@ -10,3 +10,4 @@ export const type = (content, $el, status) => {
     }
 };
 
+export const getNode = (el) => document.querySelector(el)

@@ -4,7 +4,7 @@ import {Navigation} from './components/Navigation/Navigation';
 import {SocLinks} from './components/SocLinks/SocLinks';
 import {Border} from './components/Border/Border';
 import {Content} from './components/Content';
-import {Cube} from './components/Cube/Cube';   
+import {Cube} from './components/Cube/Cube';  
 
 export const App = () => {  
     return (

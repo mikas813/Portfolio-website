@@ -9,6 +9,11 @@ export const GAInit = (TrackingID) => {
     ReactGA.initialize(TrackingID);
 };
 
+export const contentful = {
+    space: 'wz1fit8x1666',
+    token: 'MYN03qokpkVPScdgWwonr6OFW-JiRwRrmBIndwE6VL0'
+};
+
 export const GAEvent = (category, action) => {
     ReactGA.initialize(process.env.REACT_APP_GA_TRAKING);
     ReactGA.event({
